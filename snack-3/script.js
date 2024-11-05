@@ -11,12 +11,12 @@ const plusOne = numbers.map((number) => {
     return number += 1;
 });
 
-console.log('Soluzione 1:');
+console.log('MAP');
 console.log(plusOne);
 
 
 // SOLUZIONE 2 (COMPATTA)
 const newPlusOne = numbers.map(number => number += 1);
 
-console.log('Soluzione 2 compatta:');
+console.log('MAP (compatto)');
 console.log(newPlusOne);

@@ -8,6 +8,7 @@ const people = [
 // Risultato: 'Paolo', 'Giulia', 'Marco'
 
 // FOREACH
+console.log('FOR EACH');
 people.forEach(item => {
   console.log(item.name);
 })
