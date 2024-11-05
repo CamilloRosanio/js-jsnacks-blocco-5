@@ -12,3 +12,33 @@ const zucchine = [
 ];
 
 // A partire dall'array fornito, crea due array. Uno con le zucchine più lunghe di almeno 15cm. L'altro con le restanti.
+
+console.log('Tutte le zucchine:');
+console.log(zucchine);
+
+
+const longZucchine = zucchine.filter(zucchina => zucchina.length >= 15);
+console.log('Zucchine lunghe:');
+console.log(longZucchine);
+
+const otherZucchine = zucchine.filter(zucchina => zucchina.length < 15);
+console.log('Zucchine rimanenti:');
+console.log(otherZucchine);
+
+
+// TEST di verifica per capire se aggiungendo una property venissero modificati tutti gli Array: risultato SI.
+// longZucchine.forEach(item => item.property = 'Test');
+// console.log(zucchine);
+
+
+// TEST di creazione di un nuovo Array con dei cloni degli Object originali
+let clonedZucchine = zucchine.map((zucchina) => {
+
+  // Per ottenere dei "nuovi" oggetti che sono la copia di quelli dell'Array originale, devo dichiarare una variabile:
+  const nuovaZucchina = { ...zucchina, newProperty: 'property'};
+
+  return nuovaZucchina;
+});
+
+console.log('Zucchine clonate + Property extra:');
+console.log(clonedZucchine);
