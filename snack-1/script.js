@@ -8,7 +8,7 @@ names.forEach(item => {
     console.log(item);
 })
 
-// FOREOF
+// FOROF
 for (let item of names) {
     console.log(item);
 }
