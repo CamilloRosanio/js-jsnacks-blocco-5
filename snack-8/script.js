@@ -21,3 +21,9 @@ const students = [
 
 // Recupera la classe dello studente 'Marco Lanci'
 // Risultato: '3C'
+
+// Siccome il mio Array contiene Objects, il risultato del FIND è un Object quindi mi basta richiamare la sua proprietà subito dopo le parentesi
+const myClass = (students.find(item => item.name == 'Marco Lanci')).class;
+
+console.log('FIND');
+console.log(myClass);
