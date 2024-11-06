@@ -16,12 +16,15 @@ const zucchine = [
 console.log('Tutte le zucchine:');
 console.log(zucchine);
 
-
+// In questo caso manca il RETURN perchè è implicito. Se avessi scritto {} avrei dovuto utilizzarlo.
 const longZucchine = zucchine.filter(zucchina => zucchina.length >= 15);
 console.log('Zucchine lunghe:');
 console.log(longZucchine);
 
-const otherZucchine = zucchine.filter(zucchina => zucchina.length < 15);
+// Soluzione 1
+// const otherZucchine = zucchine.filter(zucchina => zucchina.length < 15);
+// Soluzione 2 (NOT !)
+const otherZucchine = zucchine.filter(zucchina => !(zucchina.length >= 15));
 console.log('Zucchine rimanenti:');
 console.log(otherZucchine);
 
@@ -42,3 +45,17 @@ let clonedZucchine = zucchine.map((zucchina) => {
 
 console.log('Zucchine clonate + Property extra:');
 console.log(clonedZucchine);
+
+
+// SOLUZIONE FOR EACH
+// Performante perchè in 1 solo controllo smisto già su 2 Array
+const arrayLong = [];
+const arrayShort = [];
+
+zucchine.forEach( (zucchina) => {
+  if(zucchina.length >= 15) {
+    arrayLong.push(zucchina);
+  } else if(zucchina.length >= 15) {
+    arrayShort.push(zucchina);
+  }
+})
